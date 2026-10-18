@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"log"
-	"strconv"
 	"sync"
 
 	"github.com/navigator-systems/go-chaos/config"
@@ -46,16 +45,6 @@ func selectFunction(cfg *config.GenConfig) []config.JobConfig {
 
 func ExecuteChaos(cfg *config.GenConfig, dryFlag bool) error {
 	var wg sync.WaitGroup
-	done := make(chan struct{})
-	if cfg.Hypothesis != nil {
-
-		workers, _ := strconv.Atoi(cfg.Hypothesis.Pings)
-		wg.Add(workers)
-		for i := 0; i < workers; i++ {
-			go Ping(cfg.Hypothesis.Url, cfg.Hypothesis.Report, &wg)
-		}
-
-	}
 
 	selectFunction(cfg)
 
@@ -79,7 +68,6 @@ func ExecuteChaos(cfg *config.GenConfig, dryFlag bool) error {
 		log.Println("Dry run, no chaos executed, ignoring notifications")
 	}
 
-	close(done)
 	wg.Wait()
 	return nil
 }

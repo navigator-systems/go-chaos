@@ -5,16 +5,7 @@ type GenConfig struct {
 	Description   string        `hcl:"description"`
 	Function      string        `hcl:"function,optional"`
 	Job           []JobConfig   `hcl:"job,block"`
-	Hypothesis    *Hypothesis   `hcl:"hypothesis,block"`
 	Notifications []NotifConfig `hcl:"notification,block"`
-}
-
-type Hypothesis struct {
-	Name        string `hcl:"name"`
-	Description string `hcl:"description"`
-	Pings       string `hcl:"workers"`
-	Url         string `hcl:"url"`
-	Report      string `hcl:"report"`
 }
 
 type NotifConfig struct {
