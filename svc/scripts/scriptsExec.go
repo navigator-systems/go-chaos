@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/gochaos-app/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/config"
 )
 
 func ExecuteScript(cfg config.JobConfig, dry bool) {

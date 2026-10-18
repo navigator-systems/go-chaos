@@ -6,7 +6,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/lambda"
-	"github.com/gochaos-app/go-chaos/ops"
+	"github.com/navigator-systems/go-chaos/ops"
 )
 
 type chaosLambdafn func([]string, int, *lambda.Client)

@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/gochaos-app/go-chaos/cmd"
+	"github.com/navigator-systems/go-chaos/cmd"
 	"github.com/urfave/cli/v2"
 )
 

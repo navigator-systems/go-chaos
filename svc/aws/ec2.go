@@ -7,7 +7,7 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/ec2"
 	"github.com/aws/aws-sdk-go-v2/service/ec2/types"
-	"github.com/gochaos-app/go-chaos/ops"
+	"github.com/navigator-systems/go-chaos/ops"
 )
 
 type chaosEC2fn func([]string, int, *ec2.Client)

@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/gochaos-app/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/config"
 )
 
 func randomJobs(jobs []config.JobConfig) []config.JobConfig {

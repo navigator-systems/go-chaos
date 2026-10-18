@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/gochaos-app/go-chaos/config"
 	"github.com/hashicorp/hcl/v2/hclsimple"
+	"github.com/navigator-systems/go-chaos/config"
 )
 
 // func to decode file, if it fails it throws an error

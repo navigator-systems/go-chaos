@@ -7,7 +7,7 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
-	jobCfg "github.com/gochaos-app/go-chaos/config"
+	jobCfg "github.com/navigator-systems/go-chaos/config"
 )
 
 type awsfn func(aws.Config, string, string, string, int, bool)

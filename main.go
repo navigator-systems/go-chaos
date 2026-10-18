@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/gochaos-app/go-chaos/cli"
+	"github.com/navigator-systems/go-chaos/cli"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package k8s
 import (
 	"log"
 
-	"github.com/gochaos-app/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/config"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"

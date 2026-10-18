@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/gochaos-app/go-chaos/config"
-	"github.com/gochaos-app/go-chaos/notifications"
-	"github.com/gochaos-app/go-chaos/svc/aws"
-	"github.com/gochaos-app/go-chaos/svc/do"
-	"github.com/gochaos-app/go-chaos/svc/gcp"
-	"github.com/gochaos-app/go-chaos/svc/k8s"
-	"github.com/gochaos-app/go-chaos/svc/scripts"
+	"github.com/navigator-systems/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/notifications"
+	"github.com/navigator-systems/go-chaos/svc/aws"
+	"github.com/navigator-systems/go-chaos/svc/do"
+	"github.com/navigator-systems/go-chaos/svc/gcp"
+	"github.com/navigator-systems/go-chaos/svc/k8s"
+	"github.com/navigator-systems/go-chaos/svc/scripts"
 )
 
 type cloudfn func(config.JobConfig, bool)

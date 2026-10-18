@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/digitalocean/godo"
-	"github.com/gochaos-app/go-chaos/ops"
+	"github.com/navigator-systems/go-chaos/ops"
 )
 
 type chaosLoadBalancerFn func(string, string, int, *godo.Client)

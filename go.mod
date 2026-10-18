@@ -1,4 +1,4 @@
-module github.com/gochaos-app/go-chaos
+module github.com/navigator-systems/go-chaos
 
 go 1.18
 

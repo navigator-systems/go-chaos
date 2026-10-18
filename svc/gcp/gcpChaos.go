@@ -5,7 +5,7 @@ import (
 	"log"
 
 	resourcemanager "cloud.google.com/go/resourcemanager/apiv3"
-	"github.com/gochaos-app/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/config"
 	resourcemanagerpb "google.golang.org/genproto/googleapis/cloud/resourcemanager/v3"
 
 	"google.golang.org/api/iterator"

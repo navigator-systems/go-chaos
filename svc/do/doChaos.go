@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/digitalocean/godo"
-	"github.com/gochaos-app/go-chaos/config"
+	"github.com/navigator-systems/go-chaos/config"
 )
 
 type dofn func(*godo.Client, string, string, int, bool)
