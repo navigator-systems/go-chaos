@@ -12,6 +12,11 @@ job "script" "python3:script.py" {
     }
 }
 
+notifications "slack" {
+    to   = ["C04N5HS91MZ", "C04NJH791MU"]
+    body = "chaos experiment running, to check dev teams and get latency in qa"
+}
+
 #job "script" "python3:script.py" {
 #    region = "us-west-2"
 #    namespace = "default"

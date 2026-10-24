@@ -2,13 +2,14 @@ package cmd
 
 import (
 	"log"
-	"sync"
+	"math/rand"
+	"time"
 
 	"github.com/navigator-systems/go-chaos/config"
 	"github.com/navigator-systems/go-chaos/notifications"
 	"github.com/navigator-systems/go-chaos/svc/aws"
 	"github.com/navigator-systems/go-chaos/svc/do"
-	"github.com/navigator-systems/go-chaos/svc/gcp"
+
 	"github.com/navigator-systems/go-chaos/svc/k8s"
 	"github.com/navigator-systems/go-chaos/svc/scripts"
 )
@@ -20,7 +21,6 @@ func switchService(job config.JobConfig, dry bool) {
 		"aws":        aws.AmazonChaos,
 		"do":         do.DigitalOceanChaos,
 		"kubernetes": k8s.KubernetesChaos,
-		"gcp":        gcp.GoogleChaos,
 		"script":     scripts.ExecuteScript,
 	}
 	if _, servExists := cloudMap[job.Cloud]; servExists {
@@ -44,7 +44,6 @@ func selectFunction(cfg *config.GenConfig) []config.JobConfig {
 }
 
 func ExecuteChaos(cfg *config.GenConfig, dryFlag bool) error {
-	var wg sync.WaitGroup
 
 	selectFunction(cfg)
 
@@ -68,6 +67,13 @@ func ExecuteChaos(cfg *config.GenConfig, dryFlag bool) error {
 		log.Println("Dry run, no chaos executed, ignoring notifications")
 	}
 
-	wg.Wait()
 	return nil
+}
+
+func randomJobs(jobs []config.JobConfig) []config.JobConfig {
+	rand.New(rand.NewSource(time.Now().UnixNano()))
+	rand.Shuffle(len(jobs), func(i, j int) {
+		jobs[i], jobs[j] = jobs[j], jobs[i]
+	})
+	return jobs
 }

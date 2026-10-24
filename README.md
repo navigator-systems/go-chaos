@@ -23,6 +23,10 @@ with declarative code and run chaos experiments in your cloud infrastructure. Al
 
 [go-chaos documentation](https://gochaos-app.github.io/)
 
+## AI-era chaos engineering
+
+The initial AI chaos experiment is a local prompt-injection resilience probe for Ollama. It uses synthetic input and a generated dummy canary; it does not intercept or modify live user prompts. See the [AI chaos experiment guide](./docs/ai-chaos.md).
+
 ## Usage 
 go-chaos read chaos experiments in HCL format.
 
